@@ -1,6 +1,5 @@
 # bool
 # if
-# input
 
 
 # my_value = None
@@ -91,4 +90,64 @@
 # value = float(value)
 # print(value)
 #
+#
+# value = -10.3
+# value = int(value)
+# print(value, type(value))
 
+# value = -10.3
+# value = str(value)
+# print(value, type(value))
+
+# value = "100_000"
+# value = int(value)
+# print(value, type(value))
+
+
+# value = "100.099"
+# value = float(value)
+# print(value, type(value))
+
+
+# value = True
+# value = float(value)
+# print(value, type(value))
+###################################
+
+# value = 1         #int в bool всегда тру кроме 0
+# value = bool(value)
+# print(value, type(value))
+
+# value = 10.4         #float в bool всегда тру кроме 0.0
+# value = bool(value)
+# print(value, type(value))
+
+# value = None         #none -> always False
+# value = bool(value)
+# print(value, type(value))
+
+
+# value = ""         #str в bool всегда тру кроме пустой строки ""
+# value = bool(value)
+# print(value, type(value))
+
+
+# str = "qwerty"    #error str set as name
+# number = 123
+# my_value = str(number)
+# print(my_value, type(my_value))
+
+# value = "qwerty"
+# if not value:
+#     print("Value is none")
+# if value:
+#     print(f"This value {value} is not 0")
+
+################################
+## in
+
+my_str = "bjksnvjkuhksjnvuehwoijlzxc"
+sub_str = "zxc"
+
+if sub_str in my_str:
+    print("!!!!!!!!!!!!!!!!!!!!!!")
