@@ -7,7 +7,9 @@
 value = input("Enter a number: ")
 try:
     value = int(value)
-    result = value * 2
-    print(value, result)
 except:
     print("It is not a number!!!")
+    value = 0
+
+result = value * 2
+print(value, result)
