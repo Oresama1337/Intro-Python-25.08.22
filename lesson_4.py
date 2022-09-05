@@ -19,14 +19,21 @@
 
 ############################ тернарный оператор
 
-value = -12
-###########
-if value >= 0:
-    result = value
-else:
-    result = value * 2
-print(result)
-##########
-# new_line = positive if result else negative
-result = value if value >= 0 else value * 2
-print(result)
+# value = -12
+# ###########
+# if value >= 0:
+#     result = value
+# else:
+#     result = value * 2
+# print(result)
+# ##########
+# # new_line = positive if result else negative
+# result = value if value >= 0 else value * 2
+# print(result)
+
+######################цикл с условием
+
+value = 10
+while value >=0:
+    print(value)
+    break
