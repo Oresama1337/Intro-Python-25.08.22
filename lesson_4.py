@@ -34,6 +34,32 @@
 ######################цикл с условием
 
 value = 10
-while value >=0:
-    print(value)
-    break
+# while value >= 0:
+#     print(value)
+#     value -=1
+
+## not very good
+
+# while True:
+#     print(value)
+#     value -=1
+#     if value < 0:
+#         break
+#
+# situative
+#
+# do_while = True
+# while do_while:
+#     print(value)
+#     value -= 1
+#     if value < 0:
+#         do_while = False
+
+
+################### методы строк
+
+
+my_str = "qwerty"
+
+symbol = my_str[0]  #получение значения по индексу
+print(symbol)
