@@ -96,5 +96,5 @@ value = 10
 # print(new_str)
 
 my_str = 'asd'
-if my_str.isalpha():
+if my_str.islower():  # метод строки
     print("This is number", my_str)
