@@ -95,6 +95,6 @@ value = 10
 # new_str = my_str[::-1]  #разворот строки
 # print(new_str)
 
-my_str = '123'
-if my_str.isdigit():
+my_str = 'asd'
+if my_str.isalpha():
     print("This is number", my_str)
