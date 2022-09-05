@@ -10,4 +10,4 @@ try:
     result = value * 2
     print(value, result)
 except:
-    pass
+    print("It is not a number!!!")
