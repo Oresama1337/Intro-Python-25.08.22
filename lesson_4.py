@@ -4,12 +4,14 @@
 # цикл с условием
 # методы строк
 
-value = input("Enter a number: ")
+value = input("Enter a full number: ")
 try:
     value = int(value)
-except:
-    print("It is not a number!!!")
-    value = 0
+    result = 1 / value
+    print(value, result)
 
-result = value * 2
-print(value, result)
+except ValueError:
+    print("It is not a full number!!!")
+
+except ZeroDivisionError:
+    print("Can not devide on zero!!!")
