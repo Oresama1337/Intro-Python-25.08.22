@@ -60,12 +60,12 @@
 # else:
 #     print("Value less or equal than 100")
 
-#if условие
+# if условие
 #   блок если да
 # elif условие 2
 #   блок если да
-#----------------------
-#else:
+# ----------------------
+# else:
 #   если нет
 
 
@@ -79,7 +79,7 @@
 #     print("Value is 0")
 
 ######################
-#Приведение типов
+# Приведение типов
 #####################
 
 # value_int = 10
@@ -146,8 +146,19 @@
 ################################
 ## in
 
-my_str = "bjksnvjkuhksjnvuehwoijlzxc"
-sub_str = "zxc"
+# my_str = "bjksnvjkuhksjnvuehwoijlzxc"
+# sub_str = "zxc"
+#
+# if sub_str in my_str:
+#     print("!!!!!!!!!!!!!!!!!!!!!!")
 
-if sub_str in my_str:
-    print("!!!!!!!!!!!!!!!!!!!!!!")
+val_1 = 19
+val_2 = 2
+
+if val_1 % 2 == 0:
+    if val_2 > 0:
+        print("Case 1")
+    else:
+        print("Case 2")
+else:
+    print("Case 3")
