@@ -5,5 +5,9 @@
 # методы строк
 
 value = input("Enter a number: ")
-result = value * 2
-print(value, result)
+try:
+    value = int(value)
+    result = value * 2
+    print(value, result)
+except:
+    pass
