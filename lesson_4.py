@@ -60,6 +60,15 @@ value = 10
 
 
 my_str = "qwerty"
+# index = 0
+index = -1  #отсчет от конца строки
 
-symbol = my_str[0]  #получение значения по индексу
+symbol = my_str[index]  # получение значения по индексу
 print(symbol)
+
+# if index < len(my_str):
+#     symbol = my_str[index]  # получение значения по индексу
+#     print(symbol)
+
+# symbol_count = len(my_str)
+# print(symbol_count)
