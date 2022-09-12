@@ -17,7 +17,7 @@
 # Генерирование через range или другие "фишки" я засчитывать не буду ))
 
 my_string = '0123456789'
-for i_1 in my_string:
-    for i_2 in my_string:
-        result = int(i_1 + i_2)
+for symb_1 in my_string:
+    for symb_2 in my_string:
+        result = int(symb_1 + symb_2)
         print(result)
