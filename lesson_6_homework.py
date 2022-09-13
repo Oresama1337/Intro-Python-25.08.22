@@ -13,6 +13,7 @@ for index in my_list1:
     if index > 100:
         my_result.append(index)
 print(my_result)
+
 # 3
 
 my_list2 = [3, 5, 6, 10]
