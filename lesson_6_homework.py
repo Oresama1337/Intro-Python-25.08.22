@@ -18,7 +18,7 @@ print(my_result)
 
 my_list2 = [3, 2, 10, 5]
 if len(my_list2) < 2:
-    new_list = my_list2.append(0)
+    my_list2.append(0)
 else:
     my_list2.append((my_list2[-1]) + my_list2[-2])
 print(my_list2)
