@@ -75,6 +75,12 @@ print(my_dict_3, "\t" "№5В")
 # если ключ есть только в одном из двух словарей - поместить пару ключ:значение,
 # если ключ есть в двух словарях - поместить пару {ключ: [значение_из_первого_словаря, значение_из_второго_словаря]},
 my_dict_4 = {}
-my_dict_4.update(my_dict_1)
-my_dict_4.update(my_dict_2)
+for key in my_dict_1.keys() | my_dict_2.keys():
+    if key in my_dict_1:
+        if key in my_dict_2:
+            my_dict_4[key] = [my_dict_1[key], my_dict_2[key]]
+        else:
+            my_dict_4[key] = my_dict_1[key]
+    else:
+        my_dict_4[key] = my_dict_2[key]
 print(my_dict_4, "\t" "№5Г")
