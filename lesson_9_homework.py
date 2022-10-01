@@ -137,3 +137,27 @@ print(my_list, "\t" "№7")
 # print(e_mail)
 # >>>miller.249@sgdyyur.com
 
+
+import random
+import string
+
+names = random.choice(["nika", "sonja", "alex", "roma", "elly", "vlad", "andrey"])
+domains = random.choice([".ru", ".com", ".net", ".ua", ".fi"])
+#letters = "qwertyuiopasdfghjklzxcvbnm"
+
+def random_letters(z):
+    return "".join(random.choice(string.ascii_lowercase) for letter in range(6))
+
+print(f"{names}."
+      f"{random.randint(100,999)}@"
+      f"{random_letters(5)}"
+      f"{domains}")
+
+print(f"{random.choice(['king','miller','kean'])}."
+      f"{random.randint(100,999)}@"
+      f"{''.join(random.choice(string.ascii_letters) for _ in range(5,7+1))}."
+      f"{random.choice(['net','com','ua'])}")
+
+numbers = str(random.randint(100, 999))
+
+
