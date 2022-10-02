@@ -141,23 +141,27 @@ print(my_list, "\t" "№7")
 import random
 import string
 
-names = random.choice(["nika", "sonja", "alex", "roma", "elly", "vlad", "andrey"])
-domains = random.choice([".ru", ".com", ".net", ".ua", ".fi"])
-#letters = "qwertyuiopasdfghjklzxcvbnm"
+names = ["nika", "sonja", "alex", "roma", "elly", "vlad", "andrey"]
+domains = [".ru", ".com", ".net", ".ua", ".fi"]
 
-def random_letters(z):
-    return "".join(random.choice(string.ascii_lowercase) for letter in range(6))
 
-print(f"{names}."
-      f"{random.randint(100,999)}@"
-      f"{random_letters(5)}"
-      f"{domains}")
+def create_email(names, domains):
+    name_gen = random.choice(names)
+    dom_gen = random.choice(domains)
+    numbers = str(random.randint(100, 999))
+    random_letters = "".join(random.choice(string.ascii_lowercase) for letter in range(random.randint(5, 7 + 1)))
 
-print(f"{random.choice(['king','miller','kean'])}."
-      f"{random.randint(100,999)}@"
-      f"{''.join(random.choice(string.ascii_letters) for _ in range(5,7+1))}."
-      f"{random.choice(['net','com','ua'])}")
+    print(f"{name_gen}."
+          f"{numbers}@"
+          f"{random_letters}"
+          f"{dom_gen}")
+    return name_gen, numbers, random_letters, dom_gen
 
-numbers = str(random.randint(100, 999))
 
+create_email(names, domains)
+
+# print(f"{names}."
+#       f"{random.randint(100, 999)}@"
+#       f"{random_letters(5)}"
+#       f"{domains}")
 
