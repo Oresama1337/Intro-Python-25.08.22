@@ -160,8 +160,3 @@ def create_email(names, domains):
 
 create_email(names, domains)
 
-# print(f"{names}."
-#       f"{random.randint(100, 999)}@"
-#       f"{random_letters(5)}"
-#       f"{domains}")
-
