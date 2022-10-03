@@ -94,8 +94,8 @@ print(my_list, "\t" "№5")
 def same_symbols(my_str, my_str_2):
     set_1 = set(my_str)
     set_2 = set(my_str_2)
-    ones = [set_1 | set_2]
-    return ones
+    ones = set_1 | set_2
+    return list(ones)
 
 
 my_str = "aaaaaab"
