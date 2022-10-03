@@ -18,7 +18,7 @@ def turning_string_list(my_list):
 
 
 my_list = ["321", "123", "qwe", "asd", "qwe", "asd", "qwe", "asd"]
-new_list = [turning_string_list(my_list)]
+new_list = turning_string_list(my_list)
 print(new_list, "\t" "№1")
 
 
@@ -33,7 +33,7 @@ def first_element_a(my_list):
 
 
 my_list = ["asd", "weq", "123", "azx", "qwa", "abca"]
-new_list = [first_element_a(my_list)]
+new_list = first_element_a(my_list)
 print(new_list, "\t" "№2")
 
 
@@ -48,7 +48,7 @@ def element_a(my_list):
 
 
 my_list = ["qwe", "qaz", "asd", "cba", "zasa", "ababa", "zxc"]
-new_list = [element_a(my_list)]
+new_list = element_a(my_list)
 print(new_list, "\t" "№3")
 
 
@@ -63,7 +63,7 @@ def list_of_strings(my_list):
 
 
 my_list = [1, 2, 3, "11", "22", "33", 4, 5, 6, "Hello"]
-new_list = [list_of_strings(my_list)]
+new_list = list_of_strings(my_list)
 print(new_list, "\t" "№4")
 
 
@@ -82,7 +82,7 @@ def unic_symbols(my_str):
 
 
 my_str = "aabbccddeeQWERTY"
-my_list = [unic_symbols(my_str)]
+my_list = unic_symbols(my_str)
 print(my_list, "\t" "№5")
 
 
@@ -94,13 +94,13 @@ print(my_list, "\t" "№5")
 def same_symbols(my_str, my_str_2):
     set_1 = set(my_str)
     set_2 = set(my_str_2)
-    ones = set_1 | set_2
+    ones = [set_1 | set_2]
     return ones
 
 
 my_str = "aaaaaab"
 my_str_2 = "cddd"
-ones = [same_symbols(my_str, my_str_2)]
+ones = same_symbols(my_str, my_str_2)
 print(ones, "\t" "№6")
 
 
@@ -121,7 +121,7 @@ def unic_ones(str_1, str_2):
 
 str_1 = "aaasdfw1"
 str_2 = "asdfffw1"
-my_list = [unic_ones(str_1, str_2)]
+my_list = unic_ones(str_1, str_2)
 print(my_list, "\t" "№7")
 #
 # 8. Даны списки names и domains (создать самостоятельно).
@@ -151,12 +151,14 @@ def create_email(names, domains):
     numbers = str(random.randint(100, 999))
     random_letters = "".join(random.choice(string.ascii_lowercase) for letter in range(random.randint(5, 7 + 1)))
 
-    print(f"{name_gen}."
-          f"{numbers}@"
-          f"{random_letters}"
-          f"{dom_gen}")
-    return name_gen, numbers, random_letters, dom_gen
+    email = (f"{name_gen}.{numbers}@{random_letters}{dom_gen}")
+    return email
 
 
-create_email(names, domains)
+email = create_email(names, domains)
+print(email)
 
+# print(f"{name_gen}."
+#       f"{numbers}@"
+#       f"{random_letters}"
+#       f"{dom_gen}")
