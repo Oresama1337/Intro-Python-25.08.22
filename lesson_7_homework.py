@@ -131,3 +131,9 @@ for sym in (set_1 & set_2):
     if (str_1.count(sym) == 1) & (str_2.count(sym) == 1):
         my_list.append(sym)
 print(my_list)
+
+# str_1 = "aaasdfw"
+# str_2 = "asdfffw"
+# common_elements = list(set(str_1) & (str_2))
+# unique_common_elements = []
+# for
