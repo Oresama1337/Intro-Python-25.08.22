@@ -1,4 +1,4 @@
-1   Smith	English	188,840
+1 Smith	English	188,840
 2	Garcia	Spanish	173,892
 3	Martinez	Spanish	146,931
 4	Williams	English, Welsh	146,796
