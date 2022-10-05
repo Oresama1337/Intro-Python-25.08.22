@@ -1,4 +1,4 @@
-1 Smith	English	188,840
+1	Smith	English	188,840
 2	Garcia	Spanish	173,892
 3	Martinez	Spanish	146,931
 4	Williams	English, Welsh	146,796
@@ -40,7 +40,7 @@
 40	Hall	English	37,041
 41	Young	English	36,035
 42	Castillo	Spanish	35,993
-43	Lee English	35,909
+43	Lee	English	35,909
 44	Adams	English, Welsh	35,799
 45	Trevino (Treviño)	Spanish	35,626
 46	Scott	Scottish	35,450
