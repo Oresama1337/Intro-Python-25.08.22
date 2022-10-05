@@ -18,7 +18,7 @@ def read_file(domains):
     return data
 
 
-print(read_file(domains))
+#print(read_file(domains))
 #
 # 2. Написать функцию, которая получает в виде параметра имя файла (names.txt)
 # и возвращает список всех фамилий из него.
@@ -59,7 +59,7 @@ def get_dates(authors):
     return result
 
 
-print(get_dates("authors.txt"))
+#print(get_dates("authors.txt"))
 
 #
 # По просьбам некоторых студентов начну включать дополнительные задания.
