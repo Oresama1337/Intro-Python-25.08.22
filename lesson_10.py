@@ -4,59 +4,63 @@
 import os
 
 #
-# path = "."
-# files = os.listdir(path)  # sorted(os.listdir(path))
-# print(files)
+path = "."
+files = os.listdir(path)  # sorted(os.listdir(path))
+print(files)
 #
-# filemane = "lesson_9.txt"
+filename = "lesson_9.txt"
 #
 # #1 - можно, но осторожно
-# file = open(filemane, "r")
-# data = file.read()
-# print(data)
-# file.close() #!!!!
+file = open(filename, "r")
+data = file.read()
+print(data)
+file.close()  # !!!!
 #
 # #2 - much better
 #
-# with open(filemane, "r") as file:
-#     data = file.read()
-# print(data)
-# filename_out = "test.txt"
-# text = "qwerty\nTEST"
-# with open(filename_out, "w") as file_txt:
-#     file_txt.write(text)
+with open(filename, "r") as file:
+    data = file.read()
+print(data)
+filename_out = "test.txt"
+text = "qwerty\nTEST"
+with open(filename_out, "w") as file_txt:
+    file_txt.write(text)
 ###########################################
-# filename = "test.txt"
-# with open(filename,"r") as file:
-#     # data = [line.strip() for line in file.readlines()]
-#     data = file.readlines()
-# print(data)
+filename = "test.txt"
+with open(filename, "r") as file:
+    # data = [line.strip() for line in file.readlines()]
+    data = file.readlines()
+print(data)
 #
-# filename_out = "test.txt"
-# data.append("\nTEST")
-# with open(filename_out, "w") as file_txt:
-#     file_txt.writelines(data)
-#     file_txt.writelines([f"{line}\n" for line in data])
+filename_out = "test.txt"
+data.append("\nTEST")
+with open(filename_out, "w") as file_txt:
+    file_txt.writelines(data)
+    file_txt.writelines([f"{line}\n" for line in data])
 ################################################
-# filename = "test.txt"
-# with open(filename, "r") as file:
-#     data = file.read().splitlines()
-# print(data)
+filename = "test.txt"
+with open(filename, "r") as file:
+    data = file.read().splitlines()
+print(data)
 #
-# filename_out = "test.txt"
-# data.append("\nTEST")
-# with open(filename_out, "w") as file_txt:
-#     file_txt.writelines("\n".join(data))
-#
-#
-# def read_file(filename):
-#     with open(filename, "r") as file:
-#         data = file.read().splitlines()
-#     return data
+filename_out = "test.txt"
+data.append("\nTEST")
+with open(filename_out, "w") as file_txt:
+    file_txt.writelines("\n".join(data))
+
+
 #
 #
-# data = read_file(filename)
-# print(data)
+def read_file(filename):
+    with open(filename, "r") as file:
+        data = file.read().splitlines()
+    return data
+
+
+#
+#
+data = read_file(filename)
+print(data)
 
 ###################################################
 # Past homeworks
