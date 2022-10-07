@@ -59,23 +59,28 @@ def generate_json_data(filename):
     return random_dict
 
 
-#print(generate_json_data(filename))
+# print(generate_json_data(filename))
 
-file_path = os.path.abspath("\PycharmProjects\Intro-Python-25.08.22\generate_data.json")
+#file_path = os.path.abspath("\PycharmProjects\Intro-Python-25.08.22\generate_data.json")
+file_path_2 = os.path.abspath("\PycharmProjects\Intro-Python-25.08.22\generate_data.txt")
 
-def generate_and_write_file(file_path):
-
+def generate_and_write_file(file_path_2):
+    file_name_j, file_extension_j = os.path.splitext("generate_data.json")
+    file_name_t, file_extension_t = os.path.splitext("generate_data.txt")
     check_json = generate_json_data(filename)
     check_txt = generate_txt_data(file_txt)
-    if os.path.splitext("generate_data.json") == ".json":
+    if file_extension_j == ".json":
         with open("generate_data.json", "w") as outfile:
             json.dump(check_json, outfile, indent=4)
+            outfile.write("generate_and_write_file")
         return check_json
-    elif os.path.splitext("generate_data.txt") == ".txt":
+    elif file_extension_t == ".txt":
         with open("generate_data.txt", "w") as file:
             file.write(check_txt)
+            file.write("generate_and_write_file")
         return check_txt
 
     return str("Unsupported file format")
 
-print(generate_and_write_file(file_path))
+
+print(generate_and_write_file(file_path_2))
