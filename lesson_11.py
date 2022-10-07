@@ -7,6 +7,7 @@
 
 import json
 
+
 # values_str = "[1,2,3]"
 # values_str = '{"key": "values"}'
 # values = json.loads(values_str)
@@ -20,17 +21,19 @@ import json
 
 def read_json(filename):
     with open(filename, "r") as json_file:
-        #pass
+        # pass
         data = json.load(json_file)
     return data
 
-def write_json(filename,data):
+
+def write_json(filename, data):
     with open(filename, "w") as json_file:
         json.dump(data, json_file, indent=4)
 
-#filename_output = "data.json"
+
+# filename_output = "data.json"
 # data = read_json(filename)
-#print(data)
-data = {"name":"John", "address": {"city": "Dnipro", "street": "Polya", "building": 123}}
+# print(data)
+data = {"name": "John", "address": {"city": "Dnipro", "street": "Polya", "building": 123}}
 filename_output = "out.json"
-write_json(filename_output,data)
+write_json(filename_output, data)
