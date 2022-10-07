@@ -61,21 +61,20 @@ def generate_json_data(filename):
 
 #print(generate_json_data(filename))
 
-file_path = os.path.abspath("\PycharmProjects\Intro-Python-25.08.22")
+file_path = os.path.abspath("\PycharmProjects\Intro-Python-25.08.22\generate_data.json")
 
 def generate_and_write_file(file_path):
-    file_check_1 = "json"
-    file_check_2 = "txt"
-    generate_json_data(filename)
-    generate_txt_data(file_txt)
-    if os.path.splitext("generate_data.json") == file_check_1:
+
+    check_json = generate_json_data(filename)
+    check_txt = generate_txt_data(file_txt)
+    if os.path.splitext("generate_data.json") == ".json":
         with open("generate_data.json", "w") as outfile:
-            outfile.write("from generate_and_write_file.json")
-        return file_check_1
-    elif os.path.splitext("generate_data.txt") == file_check_2:
+            json.dump(check_json, outfile, indent=4)
+        return check_json
+    elif os.path.splitext("generate_data.txt") == ".txt":
         with open("generate_data.txt", "w") as file:
-            file.write("from generate_and_write_file.txt")
-        return file_check_2
+            file.write(check_txt)
+        return check_txt
 
     return str("Unsupported file format")
 
