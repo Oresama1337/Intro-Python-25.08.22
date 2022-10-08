@@ -32,8 +32,6 @@ def generate_txt_data(file_txt):
 
 print(generate_txt_data(file_txt), "\n", "Number 1")
 
-filename = "generate_data.json"
-
 
 def random_keys():
     keys_gen = "".join(random.choice(string.ascii_lowercase) for sym in range(5))
@@ -52,32 +50,45 @@ def generate_json_data(filename):
     random_dict = {random_keys(): random_value() for _ in range(random.randint(5, 20))}
 
     with open("generate_data.json", "w") as json_file:
-        json.dumps(random_dict, indent=4)
+        json.dump(random_dict, json_file, indent=4)
 
     return random_dict
 
 
+filename = "generate_data.json"
+generate_json_data(filename)
 print(generate_json_data(filename), "\n", "Number 2")
 
-# file_path = os.path.abspath("\PycharmProjects\Intro-Python-25.08.22\generate_data.json")
-file_path_2 = os.path.abspath("\PycharmProjects\Intro-Python-25.08.22\generate_data.txt")
 
-
-def generate_and_write_file(file_path_2):
-    file_name_j, file_extension_j = os.path.splitext("generate_data.json")
-    file_name_t, file_extension_t = os.path.splitext("generate_data.txt")
-    check_json = generate_json_data(filename)
-    check_txt = generate_txt_data(file_txt)
-    if file_extension_j == ".json":
-        with open("generate_data.json", "w") as outfile:
+def generate_and_write_file(file_path):
+    if os.path.splitext(file_path) == ".json":
+        with open(file_path, "w") as outfile:
             json.dump(check_json, outfile, indent=4)
         return check_json
-    elif file_extension_t == ".txt":
-        with open("generate_data.txt", "w") as file:
+
+    elif os.path.splitext(file_path) == ".txt":
+        with open(file_path, "w") as file:
             file.write(check_txt)
         return check_txt
+    else:
+        print("Unsupported file format")
+    return file_path
 
-    return str("Unsupported file format")
 
+file_path = "\PycharmProjects\Intro-Python-25.08.22\generate_data.txt"
+check_json = generate_json_data(filename)
+check_txt = generate_txt_data(file_txt)
 
-print(generate_and_write_file(file_path_2), "\n", "Number 3")
+generate_and_write_file(file_path)
+print(generate_and_write_file(file_path), "\n", "Number 3")
+
+# if file_extension_j == ".json":
+#     with open(file_path, "w") as outfile:
+#         json.dump(check_json, outfile, indent=4)
+#     return check_json
+# elif file_extension_t == ".txt":
+#     with open(file_path, "w") as file:
+#         file.write(check_txt)
+#     return check_txt
+
+# return str("Unsupported file format")
