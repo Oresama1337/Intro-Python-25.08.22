@@ -62,7 +62,7 @@ generate_json_data(filename)
 print(generate_json_data(filename), "\n", "Number 2")
 
 #####################################################################
-file_path = "generate_data.txt"
+file_path = "generate_write_data.txt"
 
 
 def generate_and_write_file(file_path):
