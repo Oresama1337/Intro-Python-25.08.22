@@ -33,6 +33,8 @@ def generate_txt_data(file_txt):
 print(generate_txt_data(file_txt), "\n", "Number 1")
 
 
+#################################################################
+
 def random_keys():
     keys_gen = "".join(random.choice(string.ascii_lowercase) for sym in range(5))
     return keys_gen
@@ -59,28 +61,56 @@ filename = "generate_data.json"
 generate_json_data(filename)
 print(generate_json_data(filename), "\n", "Number 2")
 
+#####################################################################
+file_path = "generate_data.txt"
+
 
 def generate_and_write_file(file_path):
-    if os.path.splitext(file_path) == ".json":
-        with open(file_path, "w") as outfile:
-            json.dump(check_json, outfile, indent=4)
-        return check_json
-
-    elif os.path.splitext(file_path) == ".txt":
-        with open(file_path, "w") as file:
+    with open(file_path, "w") as file:
+        if (".json" in file_path):
+            check_json = generate_json_data(filename)
+            json.dump(check_json, file, indent=1)
+            file.close()
+        elif (".txt" in file_path):
+            check_txt = generate_txt_data(file_txt)
             file.write(check_txt)
-        return check_txt
-    else:
-        print("Unsupported file format")
-    return file_path
+            file.close()
+        else:
+            print("Unsupported file format")
+    return file
 
-
-file_path = "\PycharmProjects\Intro-Python-25.08.22\generate_data.txt"
-check_json = generate_json_data(filename)
-check_txt = generate_txt_data(file_txt)
 
 generate_and_write_file(file_path)
 print(generate_and_write_file(file_path), "\n", "Number 3")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# if os.path.splitext(file_path) == ".json":
+#     with open(file_path, "w") as outfile:
+#         json.dump(check_json, outfile, indent=4)
+#     return check_json
+#
+# elif os.path.splitext(file_path) == ".txt":
+#     with open(file_path, "w") as file:
+#         file.write(check_txt)
+#     return check_txt
+# else:
+#     print("Unsupported file format")
+# #return file_path
 
 # if file_extension_j == ".json":
 #     with open(file_path, "w") as outfile:
