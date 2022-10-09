@@ -25,8 +25,8 @@ def generate_txt_data(file_txt):
     gen_txt = string.ascii_letters + string.whitespace + string.digits
     rand_string = "".join(random.choice(gen_txt) for sym in range(random.randint(100, 1000)))
 
-    with open(file_txt, "w") as file:
-        file.write(rand_string)
+   # with open(file_txt, "w") as file:
+    #    file.write(rand_string)
     return rand_string
 
 
@@ -51,8 +51,8 @@ def random_value():
 def generate_json_data(filename):
     random_dict = {random_keys(): random_value() for _ in range(random.randint(5, 20))}
 
-    with open("generate_data.json", "w") as json_file:
-        json.dump(random_dict, json_file, indent=4)
+   # with open("generate_data.json", "w") as json_file:
+    #    json.dump(random_dict, json_file, indent=4)
 
     return random_dict
 
@@ -62,7 +62,7 @@ generate_json_data(filename)
 print(generate_json_data(filename), "\n", "Number 2")
 
 #####################################################################
-file_path = "generate_write_data.txt"
+file_path = "generate_write_data.json"
 
 
 def generate_and_write_file(file_path):
@@ -70,14 +70,13 @@ def generate_and_write_file(file_path):
         if (".json" in file_path):
             check_json = generate_json_data(filename)
             json.dump(check_json, file, indent=1)
-            file.close()
+
         elif (".txt" in file_path):
             check_txt = generate_txt_data(file_txt)
             file.write(check_txt)
-            file.close()
+
         else:
             print("Unsupported file format")
-    return file
 
 
 generate_and_write_file(file_path)
