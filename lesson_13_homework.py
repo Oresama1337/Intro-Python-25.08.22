@@ -22,4 +22,27 @@ def name_split(sp):
 
 sorted_names = sorted(info, key=name_split)
 
-print(sorted_names)
+
+def text_split(tx):
+    text = tx["text"]
+    return len(text)
+
+
+sorted_text = sorted(info, key=text_split)
+
+
+def death_date(dd):
+    date = dd["years"]
+    template = r"\d+"
+    dates = re.findall(template, date)
+    result = ""
+    if dates:
+        result = int(dates[1])
+        if date.split()[-1] == "BC.":
+            result = -int(dates[1])
+    return result
+
+
+sorted_death = sorted(info, key=death_date)
+
+print(sorted_death)
