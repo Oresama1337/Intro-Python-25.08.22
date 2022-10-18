@@ -9,7 +9,7 @@
 #
 #
 # Кроме функций сортировки также надо написать их использование.
-import json, re, os
+import json, re
 
 filename = "data_13.json"
 with open(filename, "r") as json_file:
