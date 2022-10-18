@@ -36,10 +36,9 @@ def death_date(dd):
     template = r"\d+"
     dates = re.findall(template, date)
     result = ""
-    if dates:
-        result = int(dates[1])
-        if date.split()[-1] == "BC.":
-            result = -int(dates[1])
+    result = int(dates[1])
+    if date.split()[-1] == "BC.":
+        result = -int(dates[1])
     return result
 
 
