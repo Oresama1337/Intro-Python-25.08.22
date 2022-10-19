@@ -1,1 +1,6 @@
-{"city": "Dnipro", "street": "Polya", "building": 123}
+[
+  {"name": "John", "age": 23,"city": "New York","zip": "29000DPI"},
+  {"name": "Jackob", "age": 310,"city": "Dnipro","zip": "AZE4900"},
+  {"name": "Anna", "age": 63,"city": "York","zip": "XX1000DD"}
+
+]
