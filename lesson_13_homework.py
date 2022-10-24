@@ -24,11 +24,15 @@ sorted_names = sorted(info, key=name_split)
 
 
 def text_split(tx):
-    text = tx["text"]
-    return len(text)
+    text = tx["text"].split()
+    template = r"[A-Za-z]+"
+    world = re.findall(template, text)
+
+    return world.count(text)
 
 
 sorted_text = sorted(info, key=text_split)
+print(text_split(info))
 
 
 def death_date(dd):
@@ -42,5 +46,3 @@ def death_date(dd):
 
 
 sorted_death = sorted(info, key=death_date)
-
-print(sorted_death)
