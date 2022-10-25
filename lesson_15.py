@@ -31,6 +31,8 @@ class ExampleEncapsulation:
 
 dirname = "test1"
 example = ExampleEncapsulation(dirname)
-
+example.dirname = "test2"
+print(dir(example))
+example._create_directory()
 example.create_files()
 example.do_tanos_click()
