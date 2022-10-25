@@ -21,7 +21,8 @@ class ExampleEncapsulation:
             filename = os.path.join(self._dirname, f"{symbol}.txt")
             self._create_file_from_symbol(filename, symbol)
 
-    def _create_file_from_symbol(self, filename: str, symbol: str) -> None:
+    @staticmethod
+    def _create_file_from_symbol(filename: str, symbol: str) -> None:
         data = alphabet.replace(symbol, symbol.upper())
         with open(filename, "w") as file:
             file.write(data)
