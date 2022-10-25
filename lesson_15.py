@@ -6,6 +6,7 @@ import random
 class ExampleEncapsulation:
     def __init__(self, dirname: str):
         self.dirname = dirname
+        self.create_directory()
 
 
     def create_directory(self) -> None:
@@ -28,8 +29,8 @@ class ExampleEncapsulation:
             os.remove(os.path.join(self.dirname, filename))
 
 
-dirname = "test"
+dirname = "test1"
 example = ExampleEncapsulation(dirname)
-example.create_directory()
+#example.create_directory()
 example.create_files()
 example.do_tanos_click()
