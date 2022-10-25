@@ -8,6 +8,10 @@ class ExampleEncapsulation:
         self._dirname = dirname
         self._create_directory()
 
+    @property
+    def dirname(self):
+        return self._dirname
+
 
     def _create_directory(self) -> None:
         os.makedirs(self._dirname, exist_ok=True)
@@ -32,6 +36,7 @@ class ExampleEncapsulation:
 dirname = "test1"
 example = ExampleEncapsulation(dirname)
 
+print(example.dirname)
 #example._dirname = "test2"
 #print(dir(example))
 #example._create_directory()
