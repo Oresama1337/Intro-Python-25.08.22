@@ -4,6 +4,8 @@ import requests
 # print(r.status_code)
 # print(r.text)
 url = ('http://api.forismatic.com/api/1.0/')
+#url = "http://forismatic.com/ru/api"
+
 for key in range(10):
     params = {
         "method": "getQuote",
