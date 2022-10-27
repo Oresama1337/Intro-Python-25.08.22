@@ -9,39 +9,38 @@ file = "trading_system.json"
 def trading_system(start_file, file):
     with open(start_file, "r") as s_file, open(file, "w") as json_file:
         json_file.write(s_file.read())
-        return json_file
+    return json_file
 #trading_system(start_file,file)
 
 with open(file, "r") as json_file:
     data = json.load(json_file)
 
-
-    def current_rate():
-        course_get = data["course"]
-        return course_get
-
-
-    print("current_rate", current_rate())
+def current_rate():
+    course_get = data["course"]
+    return course_get
 
 
-    def rate_change(current_rate):
-        delta = random.uniform(-data["delta"], data["delta"])
-        rate = round((current_rate + delta), 2)
-
-        return rate
+print("current_rate", current_rate())
 
 
-    #rate_change(current_rate())
-    print("rate_change", rate_change(current_rate()))
+def rate_change(current_rate):
+    delta = random.uniform(-data["delta"], data["delta"])
+    rate = round((current_rate + delta), 2)
+
+    return rate
 
 
-    def next_roll(item):
-        with open(file, "w") as json_file:
-            data["course"] = item
-            #json_file.write(json.dumps(data))
+#rate_change(current_rate())
+print("rate_change", rate_change(current_rate()))
 
 
-    print("next", next_roll(file))
+def next_roll(item):
+    with open(file, "w") as json_file:
+        data["course"] = item
+        #json_file.write(json.dumps(data))
+
+
+print("next", next_roll(file))
 
 #
 # def available():
